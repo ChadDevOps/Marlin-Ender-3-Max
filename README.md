@@ -22,6 +22,8 @@ I did not start using Marlin until recently (3/3/2021). The first month of my pr
 
 ## Cura Start Code
 
+After leveling the bed, and saving it to EEPROM (M500), add `M420 S1` after `G28` in your start code. You do not need to run a bed-level before every print. This will load the mesh if you have already leveled your bed. Also pre-heat the bed before leveling due to expansion.
+
 ```
 ; Ender 3 Custom Start G-code
 G92 E0 ; Reset Extruder
