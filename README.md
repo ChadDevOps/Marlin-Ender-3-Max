@@ -18,7 +18,7 @@ Due to these changes I would recommend the following if you are using one of the
 
 ## Stock configs
 
-I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, I do not have a 'stock' config as I have made several upgrades to the printer. If anyone wants to take a crack at it, please do so. Clone the https://github.com/MarlinFirmware/Marlin repo, create a pull request with your config. Leave out BL-Touch settings/etc.
+I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, I do not have a 'stock' config as I have made several upgrades to the printer. If anyone wants to take a crack at it, please do so. Fork the https://github.com/MarlinFirmware/Configurations repo, create a branch and do your pull request. Leave out BL-Touch settings/etc (e.g. just the stock printer).  
 
 ## The Printer
 
@@ -26,4 +26,4 @@ I did not start using Marlin until recently (3/3/2021). The first month of my pr
 
 It's still a work in progress. 
 
-The stablizers are from [Befenybay](https://amzn.to/3rhibTq). They are NOT designed for the Ender 3 Max. If you look at the bottom left you'll see I flipped the bracket. It sits below the bottom of the printer. You'll need to lift the printer, or put stablizer feet under the 6 pads (which gives it enough height). I added the bars as I was seeing wobble with fast printing speeds.  Or design your own bracket and use a tap (the bolts are M5).
+The stabilizers are from [Befenybay](https://amzn.to/3rhibTq). They are NOT designed for the Ender 3 Max. If you look at the bottom left you'll see I flipped the bracket. It sits below the bottom of the printer. You'll need to lift the printer, or put stabilizer feet under the 6 pads (which gives it enough height). I added the bars as I was seeing wobble with fast printing speeds.  Or design your own bracket and use a tap (the bolts are M5).
