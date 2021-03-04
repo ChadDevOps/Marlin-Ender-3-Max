@@ -1,9 +1,4 @@
 /**
-BEGIN BALANDAR EDIT
-Updated: 2021.03.04 12:45PM EDT
-
-Ender 3 Max - For Adv config see https://pastebin.com/DrbqRK7W
-
 Ender 3 Max
 Firmware for bugfix-2.0.x branch
 
@@ -24,9 +19,6 @@ PID autotuned to above upgrades for hot end and bed.
 Esteps tuned for WINSINN Dual Gear Extruder
 Z-offset set based on [Gulfcoast Robotics] All Metal Hotend and my current bed height.
 Z-stop on Ender 3 Max has been removed.
-
-
-END BALANDAR EDIT
 
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
@@ -822,7 +814,12 @@ END BALANDAR EDIT
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.28 }
+
+// INSINN Dual Gear Extruder
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.28 }
+
+// Stock Extruder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1079,12 +1076,11 @@ END BALANDAR EDIT
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {  50, -5, -2.65 }
+// Gulfcoast Robotics All Metal Hotend
+//#define NOZZLE_TO_PROBE_OFFSET {  50, -5, -2.65 }
 
 // Default stock maybe?
-// #define NOZZLE_TO_PROBE_OFFSET {  50, -6, 0 }
-
-//#define NOZZLE_TO_PROBE_OFFSET {  38.5, 0, 0 } //Bondtech BMG Bltouch
+#define NOZZLE_TO_PROBE_OFFSET {  50, -6, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1648,8 +1644,8 @@ END BALANDAR EDIT
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE - 10) / 2)  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE - 10) / 2)  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
