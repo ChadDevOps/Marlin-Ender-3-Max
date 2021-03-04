@@ -1,5 +1,5 @@
 # Marlin-Ender-3-Max
-Ender 3 Max Configs for Marlin bugfix-2.0.x branch - https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7 
+Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@fd270dd](https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7)
 
 This configuration is based on the following mods:
 
