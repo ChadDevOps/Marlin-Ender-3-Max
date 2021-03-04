@@ -1,5 +1,5 @@
 # Marlin-Ender-3-Max
-Ender 3 Max Configs for Marlin bugfix-2.0.x branch. 
+Ender 3 Max Configs for Marlin bugfix-2.0.x branch - https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7 
 
 This configuration is based on the following mods:
 
@@ -9,7 +9,7 @@ This configuration is based on the following mods:
 * [PTFE Teflon® Premium Bowden Tube](https://www.3dmakerengineering.com/collections/accessories/products/ptfe-teflon-premium-bowden-tube)
 * [BL-Touch](https://amzn.to/384td6M)
 
-Due to these changes I would recommend the following if you are using the compiled .bin file, otherwise update the config and compile locally:
+Due to these changes I would recommend the following if you are using one of the compiled .bin files (see [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases), otherwise update the config and compile locally:
 
 - Tune your PID for the hotend
 - Calibrate E-Steps for your extruder
