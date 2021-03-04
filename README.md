@@ -16,6 +16,8 @@ Due to these changes I would recommend the following if you are using one of the
 - Calibrate Probe Z-Offset 
 - Remove the Z-stop if your X-axis stops before the probe can reach the bed
 
+https://youtu.be/qPDBNBgdW6o?t=680 - Dr Vax on building the Marlin Firmware with VS Code.
+
 ## Stock configs
 
 I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, I do not have a 'stock' config as I have made several upgrades to the printer. If anyone wants to take a crack at it, please do so. Fork the https://github.com/MarlinFirmware/Configurations repo, create a branch and do your pull request. Leave out BL-Touch settings/etc (e.g. just the stock printer).  
