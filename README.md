@@ -1,4 +1,4 @@
-# Marlin-Ender-3-Max
+# Marlin-Ender-3-Max w/ BL-Touch
 Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@fd270dd](https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7)
 
 This configuration is based on the following mods:
@@ -22,7 +22,7 @@ I did not start using Marlin until recently (3/3/2021). The first month of my pr
 
 ## Cura Start Code
 
-After leveling the bed, and saving it to EEPROM (M500), add `M420 S1` after `G28` in your start code. You do not need to run a bed-level before every print. This will load the mesh if you have already leveled your bed. Also pre-heat the bed before leveling due to expansion.
+After leveling the bed, and saving it to EEPROM (`M500`), add `M420 S1` after `G28` in your start code. You do not need to run a bed-level before every print. This will load the mesh if you have already leveled your bed. Also pre-heat the bed before leveling due to expansion.
 
 ```
 ; Ender 3 Custom Start G-code
