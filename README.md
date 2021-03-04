@@ -16,6 +16,10 @@ Due to these changes I would recommend the following if you are using one of the
 - Calibrate Probe Z-Offset 
 - Remove the Z-stop if your X-axis stops before the probe can reach the bed
 
+## Stock configs
+
+I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, I do not have a 'stock' config as I have made several upgrades to the printer. If anyone wants to take a crack at it, please do so. Clone the https://github.com/MarlinFirmware/Marlin repo, create a pull request with your config. Leave out BL-Touch settings/etc.
+
 ## The Printer
 
 <img src="./Ender-3-Max.jpeg?raw=true" width="250">
