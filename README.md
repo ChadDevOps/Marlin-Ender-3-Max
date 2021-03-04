@@ -20,6 +20,39 @@ Due to these changes I would recommend the following if you are using one of the
 
 I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, I do not have a 'stock' config as I have made several upgrades to the printer. If anyone wants to take a crack at it, please do so. Fork the https://github.com/MarlinFirmware/Configurations repo, create a branch and do your pull request. Leave out BL-Touch settings/etc (e.g. just the stock printer).  
 
+## Cura Start Code
+
+```
+; Ender 3 Custom Start G-code
+G92 E0 ; Reset Extruder
+
+M140 S{material_bed_temperature_layer_0} ;Start heating bed
+M190 S{material_bed_temperature_layer_0} ;Wait for bed to reach temp before proceeding
+
+G28 ; Home all axes
+M104 S{material_print_temperature_layer_0} ;Start heating extruder
+
+; BED_MESH_PROFILE LOAD=default ; klipper load mesh
+;G29 ; Auto bed leveling
+M420 S1 ; Load bed mesh - marlin - NOTE: Level bed first and SAVE - issue M500 after leveling, then print.
+
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+M109 S{material_print_temperature_layer_0} ;Wait for extruder to reach temp before proceeding
+G1 X0.1 Y20 Z0.3 F5000.0 ; Move to start position
+
+G1 X0.1 Y300.0 Z0.3 F1500.0 E30 ; Draw the first line
+G1 X1.3 Y300.0 Z0.3 F5000.0 ; Move to side a little
+G1 X1.3 Y20 Z0.3 F1500.0 E50 ; Draw the second line
+G92 E0 ; Reset Extruder
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X5 Y20 Z0.3 F5000.0 ; Move over to prevent blob squish
+
+; Klipper stuff 
+;SET_VELOCITY_LIMIT SQUARE_CORNER_VELOCITY=1 ACCEL=2000 ACCEL_TO_DECEL=500
+
+;M900 K0.66 ;Linear Advance - enable if using, make sure to calibrate first
+```
+
 ## The Printer
 
 <img src="./Ender-3-Max.jpeg?raw=true" width="250">
