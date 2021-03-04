@@ -12,7 +12,7 @@ This configuration is based on the following mods:
 Due to these changes I would recommend the following if you are using one of the compiled .bin files (see [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases), otherwise update the config and compile locally:
 
 - Tune your PID for the hotend
-- Calibrate E-Steps for your extruder
+- Calibrate E-Steps for your extruder (default is 93 for Ender 3 printers, my config has higher e-steps due to the dual gear extruder). 
 - Calibrate Probe Z-Offset 
 - Remove the Z-stop if your X-axis stops before the probe can reach the bed
 
