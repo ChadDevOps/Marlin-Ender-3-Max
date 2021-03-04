@@ -19,3 +19,7 @@ Due to these changes I would recommend the following if you are using one of the
 ## The Printer
 
 <img src="./Ender-3-Max.jpeg?raw=true" width="250">
+
+It's still a work in progress. 
+
+The stablizers are from [Befenybay](https://amzn.to/3rhibTq). They are NOT designed for the Ender 3 Max. If you look at the bottom left you'll see I flipped the bracket. It sits below the bottom of the printer. You'll need to lift the printer, or put stablizer feet under the 6 pads (which gives it enough height). I added the bars as I was seeing wobble with fast printing speeds.  Or design your own bracket and use a tap (the bolts are M5).
