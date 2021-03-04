@@ -16,3 +16,6 @@ Due to these changes I would recommend the following if you are using one of the
 - Calibrate Probe Z-Offset 
 - Remove the Z-stop if your X-axis stops before the probe can reach the bed
 
+## The Printer
+
+<img src="./Ender-3-Max.jpeg?raw=true" width="250">
