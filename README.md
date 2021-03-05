@@ -54,7 +54,7 @@ https://youtu.be/qPDBNBgdW6o?t=680 - Dr Vax on building the Marlin Firmware with
 
 I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, the config in this repo is my best guess for stock settings. Another user sent me their tuned hotend PID temps for the stock hotend. 
 
-The offical marlin config repo does not have a stock Ender 3 Max yet, if you have experience in compiling marlin and have a stock printer without the BL-Touch, please fork the https://github.com/MarlinFirmware/Configurations repo, create a branch and do your pull request with the stock config. 
+The offical marlin config repo does not have a stock Ender 3 Max yet, once this configuration has been tested a pull request can be made.
 
 ## Cura Start Code
 
