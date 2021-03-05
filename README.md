@@ -15,7 +15,7 @@ M500 ; saved
 In order to use this config with the mods listed below, invert the following comments:
 
 ```
-// INSINN Dual Gear Extruder
+// WINSINN Dual Gear Extruder
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.28 }
 
 // Stock Extruder
