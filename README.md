@@ -1,7 +1,38 @@
 # Marlin-Ender-3-Max w/ BL-Touch
 Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@fd270dd](https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7)
 
-This configuration is based on the following mods:
+Update: The posted configration files are based on stock hotend and extruder. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
+
+After applying a new firmware, it's best to run `M502` and `M500` to load and save the default settings.
+
+```
+Reset settings and save them to EEPROM
+
+M502 ; reset
+M500 ; saved
+```
+
+In order to use this config with the mods listed below, invert the following comments:
+
+```
+// INSINN Dual Gear Extruder
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.28 }
+
+// Stock Extruder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+```
+NOTE: I still recommend that you calibrate your E-Steps (139.28 above).
+
+```    
+    // [Gulfcoast Robotics]
+    //#define DEFAULT_Kp  37.01
+    //#define DEFAULT_Ki   5.19
+    //#define DEFAULT_Kd  66.01
+    // Creality Stock
+    #define DEFAULT_Kp  21.39
+    #define DEFAULT_Ki   1.56
+    #define DEFAULT_Kd  73.30
+```
 
 * [Gulfcoast Robotics All Metal Hotend Conversion Kit w/Polished Titanium Heatbreak](https://amzn.to/3rg7BvT)
 * [WINSINN Dual Gear Extruder](https://amzn.to/3qgkBQC)
@@ -9,10 +40,11 @@ This configuration is based on the following mods:
 * [PTFE Teflon® Premium Bowden Tube](https://www.3dmakerengineering.com/collections/accessories/products/ptfe-teflon-premium-bowden-tube)
 * [BL-Touch](https://amzn.to/384td6M)
 
-Due to these changes I would recommend the following if you are using one of the compiled .bin files (see [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases), otherwise update the config and compile locally:
+I would recommend the following as these can differ for every machine:
 
 - Tune your PID for the hotend
-- Calibrate E-Steps for your extruder (default is 93 for Ender 3 printers, my config has higher e-steps due to the dual gear extruder). 
+- Tune your POD for the bed (optional)
+- Calibrate E-Steps for your extruder (default is 93 for Ender 3 printers) 
 - Calibrate Probe Z-Offset 
 - Remove the Z-stop if your X-axis stops before the probe can reach the bed
 
@@ -20,7 +52,9 @@ https://youtu.be/qPDBNBgdW6o?t=680 - Dr Vax on building the Marlin Firmware with
 
 ## Stock configs
 
-I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, I do not have a 'stock' config as I have made several upgrades to the printer. If anyone wants to take a crack at it, please do so. Fork the https://github.com/MarlinFirmware/Configurations repo, create a branch and do your pull request. Leave out BL-Touch settings/etc (e.g. just the stock printer).  
+I did not start using Marlin until recently (3/3/2021). The first month of my printer experience was using Klipper. Due to this, the config in this repo is my best guess for stock settings. Another user sent me their tuned hotend PID temps for the stock hotend. 
+
+The offical marlin config repo does not have a stock Ender 3 Max yet, if you have experience in compiling marlin and have a stock printer without the BL-Touch, please fork the https://github.com/MarlinFirmware/Configurations repo, create a branch and do your pull request with the stock config. 
 
 ## Cura Start Code
 
