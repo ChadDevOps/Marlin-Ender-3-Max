@@ -822,7 +822,7 @@ Z-stop on Ender 3 Max has been removed.
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 
-// INSINN Dual Gear Extruder
+// WINSINN Dual Gear Extruder
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.28 }
 
 // Stock Extruder
