@@ -43,7 +43,7 @@ NOTE: I still recommend that you calibrate your E-Steps (139.28 above).
 I would recommend the following as these can differ for every machine:
 
 - Tune your PID for the hotend
-- Tune your POD for the bed (optional)
+- Tune your PID for the bed (optional)
 - Calibrate E-Steps for your extruder (default is 93 for Ender 3 printers) 
 - Calibrate Probe Z-Offset 
 - Remove the Z-stop if your X-axis stops before the probe can reach the bed
