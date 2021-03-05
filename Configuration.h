@@ -519,11 +519,18 @@ Z-stop on Ender 3 Max has been removed.
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_Kp  37.01
-    #define DEFAULT_Ki   5.19
-    #define DEFAULT_Kd  66.01
+    // [Gulfcoast Robotics]
+    //#define DEFAULT_Kp  37.01
+    //#define DEFAULT_Ki   5.19
+    //#define DEFAULT_Kd  66.01
+    // Creality Stock
+    #define DEFAULT_Kp  21.39
+    #define DEFAULT_Ki   1.56
+    #define DEFAULT_Kd  73.30
   #endif
 #endif // PIDTEMP
+
+
 
 
 //===========================================================================
@@ -826,7 +833,7 @@ Z-stop on Ender 3 Max has been removed.
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 3500, 3500, 300, 3500 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -839,7 +846,7 @@ Z-stop on Ender 3 Max has been removed.
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 6000, 6000, 300, 20000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
