@@ -3,7 +3,7 @@ Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@fd27
 
 Update: The posted configration files are based on stock hotend and extruder. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
 
-After applying a new firmware, it's best to run `M502` and `M500` to load and save the default settings.
+After applying a new firmware, it's best to run `M502` and `M500` to load and save the default settings. You can also run Initialize EEPROM from the lcd screen under config advanced settings.
 
 ```
 Reset settings and save them to EEPROM
