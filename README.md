@@ -1,7 +1,7 @@
 # Marlin-Ender-3-Max w/ BL-Touch
 Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@fd270dd](https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7)
 
-Update: The posted configration files are based on stock hotend and extruder. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
+Update: The posted configration files are based on stock hotend and extruder with bltouch. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
 
 After applying a new firmware, it's best to run `M502` and `M500` to load and save the default settings. You can also run Initialize EEPROM from the lcd screen under config advanced settings.
 
