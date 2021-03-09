@@ -1,25 +1,4 @@
 /**
-Ender 3 Max
-Firmware for bugfix-2.0.x branch
-
-Upgrades:
-  [Gulfcoast Robotics] All Metal Hotend Conversion Kit w/Polished Titanium Heatbreak
-      https://amzn.to/3rg7BvT
-  WINSINN Dual Gear Extruder
-      https://amzn.to/3qgkBQC
-  3dmakerengineering.com Tungsten Carbide 3D Printer Nozzle
-      https://www.3dmakerengineering.com/collections/3d-printer-nozzles/products/tungsten-carbide-3d-printer-nozzle?variant=14784857112631
-  PTFE Teflon® Premium Bowden Tube
-      https://www.3dmakerengineering.com/collections/accessories/products/ptfe-teflon-premium-bowden-tube
-  BL-Touch
-      https://amzn.to/384td6M
-
-
-PID autotuned to above upgrades for hot end and bed.
-Esteps tuned for WINSINN Dual Gear Extruder
-Z-offset set based on [Gulfcoast Robotics] All Metal Hotend and my current bed height.
-Z-stop on Ender 3 Max has been removed.
-
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
@@ -141,7 +120,7 @@ Z-stop on Ender 3 Max has been removed.
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000 // CHADDEVOPS - TESTING - was 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -519,18 +498,12 @@ Z-stop on Ender 3 Max has been removed.
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    // [Gulfcoast Robotics]
-    //#define DEFAULT_Kp  37.01
-    //#define DEFAULT_Ki   5.19
-    //#define DEFAULT_Kd  66.01
-    // Creality Stock
+    // Creality Stock - Ender 3 Max tuned - CHADDEVOPS
     #define DEFAULT_Kp  21.39
     #define DEFAULT_Ki   1.56
     #define DEFAULT_Kd  73.30
   #endif
 #endif // PIDTEMP
-
-
 
 
 //===========================================================================
@@ -715,7 +688,7 @@ Z-stop on Ender 3 Max has been removed.
   //#define ENDSTOPPULLUP_XMIN
   //#define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
-  #define ENDSTOPPULLUP_ZMIN_PROBE
+  #define ENDSTOPPULLUP_ZMIN_PROBE  // ENABLE FOR BLTOUCH - CHADDEVOPS
 #endif
 
 // Enable pulldown for all endstops to prevent a floating state
@@ -822,10 +795,7 @@ Z-stop on Ender 3 Max has been removed.
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 
-// WINSINN Dual Gear Extruder
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.28 }
-
-// Stock Extruder
+// Creality Stock Extruder
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
 
 /**
@@ -833,7 +803,7 @@ Z-stop on Ender 3 Max has been removed.
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 3500, 3500, 300, 3500 }
+#define DEFAULT_MAX_FEEDRATE          { 6000, 6000, 300, 6000 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -897,7 +867,7 @@ Z-stop on Ender 3 Max has been removed.
  *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.1 // (mm) Distance from real junction edge // default is 0.013
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -929,7 +899,7 @@ Z-stop on Ender 3 Max has been removed.
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-#define USE_PROBE_FOR_Z_HOMING
+#define USE_PROBE_FOR_Z_HOMING // ENABLE FOR BLTOUCH - CHADDEVOPS
 
 /**
  * Z_MIN_PROBE_PIN
@@ -991,7 +961,7 @@ Z-stop on Ender 3 Max has been removed.
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH
+#define BLTOUCH // ENABLE FOR BLTOUCH - CHADDEVOPS
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -1083,10 +1053,7 @@ Z-stop on Ender 3 Max has been removed.
  *     |    [-]    |
  *     O-- FRONT --+
  */
-// Gulfcoast Robotics All Metal Hotend
-//#define NOZZLE_TO_PROBE_OFFSET {  50, -5, -2.65 }
-
-// Default stock maybe?
+// Default stock - CHADDEVOPS
 #define NOZZLE_TO_PROBE_OFFSET {  50, -6, 0 }
 
 // Most probes should stay away from the edges of the bed, but
@@ -1204,7 +1171,7 @@ Z-stop on Ender 3 Max has been removed.
 #define Z_PROBE_OFFSET_RANGE_MAX 10
 
 // Enable the M48 repeatability test to test probe accuracy
-#define Z_MIN_PROBE_REPEATABILITY_TEST
+#define Z_MIN_PROBE_REPEATABILITY_TEST // ENABLE FOR BLTOUCH - CHADDEVOPS
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
@@ -1327,7 +1294,7 @@ Z-stop on Ender 3 Max has been removed.
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
-  //#define MIN_SOFTWARE_ENDSTOP_Z
+  //#define MIN_SOFTWARE_ENDSTOP_Z // DISABLE FOR BLTOUCH - CHADDEVOPS
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
@@ -1355,11 +1322,11 @@ Z-stop on Ender 3 Max has been removed.
  * RAMPS-based boards use SERVO3_PIN for the first runout sensor.
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  */
-//#define FILAMENT_RUNOUT_SENSOR
+#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
-  // Balandar Note: This may be LOW? Setting to HIGH based on v2 4.2.2 settings
+  // CHADDEVOPS Note: This may be LOW? Setting to HIGH based on v2 4.2.2 settings
   #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
@@ -1457,7 +1424,7 @@ Z-stop on Ender 3 Max has been removed.
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR  // ENABLE FOR BLTOUCH - CHADDEVOPS
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1466,13 +1433,13 @@ Z-stop on Ender 3 Max has been removed.
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28  // ENABLE FOR BLTOUCH - CHADDEVOPS
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
  * Auto-leveling needs preheating
  */
-#define PREHEAT_BEFORE_LEVELING
+#define PREHEAT_BEFORE_LEVELING   // ENABLE FOR BLTOUCH - CHADDEVOPS
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     65
@@ -1519,7 +1486,7 @@ Z-stop on Ender 3 Max has been removed.
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 12
+  #define GRID_MAX_POINTS_X 10
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column

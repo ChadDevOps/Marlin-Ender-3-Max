@@ -879,7 +879,7 @@ Ender 3 Max - For Main config - see https://pastebin.com/vDSZxUTc
 #define DEFAULT_MINTRAVELFEEDRATE     0.0     // (mm/s) Minimum travel feedrate. Set with M205 T.
 
 // Minimum time that a segment needs to take as the buffer gets emptied
-#define DEFAULT_MINSEGMENTTIME        20000   // (µs) Set with M205 B.
+#define DEFAULT_MINSEGMENTTIME        50000   // (µs) Set with M205 B. // CHADDEVOPS - was 20000
 
 // Slow down the machine if the lookahead buffer is (by default) half full.
 // Increase the slowdown divisor for larger buffer sizes.
@@ -1719,6 +1719,7 @@ Ender 3 Max - For Main config - see https://pastebin.com/vDSZxUTc
 
   //#define BABYSTEP_DISPLAY_TOTAL          // Display total babysteps since last G28
 
+  // ENABLE FOR BLTOUCH - CHADDEVOPS
   #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     //#define BABYSTEP_HOTEND_Z_OFFSET      // For multiple hotends, babystep relative Z offsets
@@ -1988,7 +1989,7 @@ Ender 3 Max - For Main config - see https://pastebin.com/vDSZxUTc
 #if BOTH(SDSUPPORT, DIRECT_STEPPING)
   #define BLOCK_BUFFER_SIZE  8
 #elif ENABLED(SDSUPPORT)
-  #define BLOCK_BUFFER_SIZE 16
+  #define BLOCK_BUFFER_SIZE 32 // CHADDEVOPS - TESTING was 16
 #else
   #define BLOCK_BUFFER_SIZE 16
 #endif
@@ -1997,7 +1998,7 @@ Ender 3 Max - For Main config - see https://pastebin.com/vDSZxUTc
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 4
+#define BUFSIZE 32 // CHADDEVOPS - TESTING was 4
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
