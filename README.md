@@ -5,6 +5,8 @@ The posted configration files are based on stock hotend and extruder with bltouc
 
 After applying a new firmware, it's best to run `M502` and `M500` to load and save the default settings. You can also run Initialize EEPROM from the lcd screen under config advanced settings. You will need to re-level the bed after issuing `M502`.
 
+You can issue commands using pronterface or octoprint (if you have it installed on a raspberry pi - recommended)
+
 ```
 Reset settings and save them to EEPROM
 
@@ -24,11 +26,15 @@ https://youtu.be/qPDBNBgdW6o?t=680 - Dr Vax on building the Marlin Firmware with
 
 # Mods
 
-In order to use this config with the mods listed below, run the following comments:
+In order to use this config with the mods listed below, run the following commands (or modify as needed):
 
 ```
 M301 P37.01 I5.19 D66.01 ;gulf coast hotend
 M92 E139.28 ; WINSINN Dual Gear Extruder
+M92 E147.71 ;set E-Steps for 0.6mm nozzle with WINSINN Dual Gear Extruder
+M205 J0.1 ;set Junction Deviation
+M900 K0.20 ;set linear advance
+M420 Z0 ; turn off fade height or set to X mm
 M500 ;save
 ```
 NOTE: I still recommend that you calibrate your E-Steps (139.28 above).
