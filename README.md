@@ -1,5 +1,5 @@
 # Marlin-Ender-3-Max w/ BL-Touch
-Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@fd270dd](https://github.com/MarlinFirmware/Marlin/commit/fd270ddc6c5b4d78437d590ae8066326850555d7)
+Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@3107d8a0f4](https://github.com/MarlinFirmware/Marlin/commit/3107d8a0f4e71bc7853d78d026912582cf185adc)
 
 The posted configration files are based on stock hotend and extruder with bltouch. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
 
