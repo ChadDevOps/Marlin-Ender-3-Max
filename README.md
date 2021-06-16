@@ -1,5 +1,7 @@
 # Marlin-Ender-3-Max w/ BL-Touch
-Ender 3 Max Configs for Marlin bugfix-2.0.x branch - [MarlinFirmware/Marlin@3107d8a0f4](https://github.com/MarlinFirmware/Marlin/commit/3107d8a0f4e71bc7853d78d026912582cf185adc)
+Updated to 2.0.9  - [MarlinFirmware/Marlin@d7c77403fd8373c7b4bfb6a4fa6d6f25c1ff9feb](https://github.com/MarlinFirmware/Marlin/commit/d7c77403fd8373c7b4bfb6a4fa6d6f25c1ff9feb)
+
+Ender 3 Max Configs for Marlin bugfix-2.0.x branch.
 
 The posted configration files are based on stock hotend and extruder with bltouch. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
 
@@ -24,7 +26,23 @@ I would recommend the following as these can differ for every machine:
 
 https://youtu.be/qPDBNBgdW6o?t=680 - Dr Vax on building the Marlin Firmware with VS Code.
 
-# Mods
+# Mods Updates - June 2021
+
+In testing:
+
+* [Micro Swiss Direct Drive Extruder for Creality CR-10 / Ender 3 Printers × 1](https://store.micro-swiss.com/products/micro-swiss-direct-drive-extruder)
+* [Satsana Dual 4010 Fan Direct Drive with longer ducts -  fan shroud](https://www.thingiverse.com/thing:4621096)
+* [PTFE Teflon® Premium Bowden Tube](https://www.3dmakerengineering.com/collections/accessories/products/ptfe-teflon-premium-bowden-tube)
+* [3dmakerengineering.com Tungsten Carbide 3D Printer Nozzle](https://www.3dmakerengineering.com/collections/3d-printer-nozzles/products/tungsten-carbide-3d-printer-nozzle?variant=14784857112631)
+* [BL-Touch](https://amzn.to/384td6M)
+* [SIBOOR Ender 3 Accessories Dual Z Axis Kit](https://amzn.to/3iLilRr)
+* [2-Pack CR10 Z axis T8 Anti Backlash Spring Loaded Nut ](https://amzn.to/3xoc8yU)
+* 2x [ReliaBot 500mm T8 Tr8x8 Lead Screw and Brass Nut (Acme Thread, 2mm Pitch, 4 Starts, 8mm Lead)](https://amzn.to/3vqsgPb) - Note: a little long, will stick out top of printer - perhaps put some spinning Groots on top?
+* [High Temperature CR-10 Plated Copper Heater Block for MK8 Extruder](https://amzn.to/3gtcM8M)
+* [Copperhead™ Heat Break × 1 - Version: C-E](https://www.sliceengineering.com/collections/replacement-parts/products/copperhead%E2%84%A2-heat-break?variant=36827917713570)
+* [Protronix Series 9 Extreme Performance Thermal Compound Paste](https://amzn.to/3xoYifI)
+
+# Old Mods - Pre June 2021
 
 In order to use this config with the mods listed below, run the following commands (or modify as needed):
 
