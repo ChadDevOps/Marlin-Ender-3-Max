@@ -3,7 +3,9 @@ Updated to 2021-11-25 (2.0.9.2 plus bugfixes to date)  - [MarlinFirmware/Marlin@
 
 Ender 3 Max Configs for Marlin bugfix-2.0.x branch. The posted configration files are based on stock hotend and extruder with bltouch/crtouch. See [releases](https://github.com/ChadDevOps/Marlin-Ender-3-Max/releases) for a compiled version.
 
-**NOTE:** These settings have been tweaked from default, please search for "CHADDEVOPS" for changed settings. See MarlinFirmware's [import-2.0.x configurations](https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Creality/Ender-3%20Max) for defaults.
+**NOTE:** These settings have been tweaked from default, please search for "CHADDEVOPS" for changed settings. See MarlinFirmware's [import-2.0.x configurations](https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Creality/Ender-3%20Max) for defaults. There have been a signaificant number of updates since I [originally committed the Ender 3 Max config](https://github.com/MarlinFirmware/Configurations/pull/442). The latest changes from Marlin's bugfix branch are merged with my customized version when updating the configuration, however many settings are modified from default. 
+
+Another option for pre-compiled firmware are nightly builds based on the official Marlin GitHub, available from https://marlin.crc.id.au/ (they ask for a small donation to become a member for a year). This should be closer to stock than my custom build found in this repo. 
 
 After applying a new firmware, it's best to run `M502` and `M500` to load and save the default settings. You can also run Initialize EEPROM from the lcd screen under config advanced settings. You will need to re-level the bed after issuing `M502`.
 
